@@ -64,10 +64,12 @@
         </thead>
         <tbody>
 
-            {% for product in cart.products.all %}
+            <!-- start for loop -->>
+
             <tr>
-                <td> <img width="60" src="{{ product.thumbnail.url }}" alt="" /></td>
-                <td>{{ product.name }}<br />{{ product.description }}</td>
+                <td> <img width="60" src="themes/images/products/4.jpg" alt="" alt="" /></td>
+                <!-- thumbnail -->
+                <td>MASSA AST<br />Color : black, Material : metal</td> <!-- name, description -->
                 <td>
                     <div class="input-append"><input class="span1" style="max-width:34px"
                             placeholder="1" id="appendedInputButtons" size="16" type="text"><button
@@ -76,16 +78,17 @@
                             class="btn btn-danger" type="button"><i
                                 class="icon-remove icon-white"></i></button> </div>
                 </td>
-                <td>$ {{ product.price }}.00</td>
+                <td>$ 7.00</td> <!-- price -->
                 <td>$ ----</td>
                 <td>$ ----</td>
-                <td>$ {{ product.price }}.00</td>
+                <td>$ 7.00</td> <!-- price -->
             </tr>
-            {% endfor %}
+
+            <!-- end for loop -->>
 
             <tr>
                 <td colspan="6" style="text-align:right">Total Price: </td>
-                <td> $ {{ cart.total }}</td>
+                <td> $ 228.00</td> <!-- total -->
             </tr>
             <tr>
                 <td colspan="6" style="text-align:right">Total Discount: </td>
